@@ -1,0 +1,428 @@
+/* ==========================================================================
+   Configurações Gerais e Tipografia (Fidelidade ao Modelo Minimalista)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --cor-fundo-tela: #cbd5e1; /* Cor cinza-azulada do fundo externo das fotos */
+    --cor-fundo-site: #ffffff;
+    --cor-texto-principal: #1a1a1a;
+    --cor-texto-secundario: #64748b;
+    --cor-borda-fina: #e2e8f0;
+    --cor-linha-separadora: #e2e8f0;
+    --cor-botao-preto: #2d2d2d;
+    --cor-botao-hover: #111111;
+}
+
+body {
+    background-color: var(--cor-fundo-tela);
+    padding: 2rem 0; /* Simula a margem externa das fotos */
+    display: flex;
+    justify-content: center;
+}
+
+/* Container que envolve todo o site mimetizando o bloco branco das imagens */
+.site-wrapper {
+    background-color: var(--cor-fundo-site);
+    width: 100%;
+    max-width: 1280px;
+    min-height: 100vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   CSS GRID: Header & Navigation
+   ========================================================================== */
+header {
+    border-bottom: 1px solid var(--cor-borda-fina);
+    padding: 1.5rem 3rem;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-texto h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    line-height: 1.2;
+}
+
+.logo-texto p {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+}
+
+nav {
+    justify-self: end;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+/* Divisores verticais simples entre os itens de menu conforme a foto */
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|";
+    color: #cbd5e1;
+    margin-left: 1.5rem;
+    font-weight: 300;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--cor-texto-principal);
+}
+
+/* A linha preta embaixo exatamente sob o item ativo */
+nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor-botao-preto);
+}
+
+.btn-membro {
+    background-color: var(--cor-botao-preto);
+    color: #ffffff !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-membro:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+/* ==========================================================================
+   CSS GRID: Estrutura Principal do Miolo (2 Colunas Assimétricas)
+   ========================================================================== */
+main {
+    flex: 1;
+    padding: 3rem;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr; /* Coluna da imagem ligeiramente menor que a de texto/ações */
+    gap: 4rem;
+    align-items: start;
+}
+
+.col-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.col-conteudo h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-bottom: 1rem;
+}
+
+.col-conteudo p {
+    color: var(--cor-texto-secundario);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   CSS GRID: Elementos do Acervo (Foto 1)
+   ========================================================================== */
+.busca-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.busca-wrapper {
+    position: relative;
+}
+
+.busca-wrapper input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.busca-wrapper::before {
+    content: "🔍";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+.btn-preto {
+    background-color: var(--cor-botao-preto);
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-preto:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+/* Indicadores de quantidade (Grid de 4 colunas com divisores verticais finos) */
+.estatisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    border-top: 1px solid var(--cor-linha-separadora);
+    padding-top: 2rem;
+}
+
+.estatistica-item {
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.estatistica-item:not(:last-child) {
+    border-right: 1px solid var(--cor-linha-separadora);
+}
+
+.estatistica-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.estatistica-numero {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    display: block;
+}
+
+.estatistica-rotulo {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* ==========================================================================
+   CSS GRID: Elementos do Contato (Fotos 2 e 3)
+   ========================================================================== */
+.contato-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.contato-item-linha {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    border-bottom: 1px solid var(--cor-linha-separadora);
+    padding-bottom: 1.5rem;
+}
+
+.contato-item-linha:last-child {
+    border-bottom: none;
+}
+
+.contato-icone-circulo {
+    background-color: #f1f5f9;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+}
+
+.contato-texto-bloco h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-bottom: 0.25rem;
+}
+
+.contato-texto-bloco p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.contato-texto-bloco span {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Seção Inferior de Contato (Foto 2) */
+.contato-inferior-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    border-top: 1px solid var(--cor-linha-separadora);
+    margin-top: 3rem;
+    padding-top: 3rem;
+}
+
+/* Formulário estruturado com CSS Grid */
+.formulario-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.formulario-linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.formulario-grid input, .formulario-grid textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.formulario-grid textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.formulario-grid .btn-preto {
+    justify-self: end;
+}
+
+/* ==========================================================================
+   Grids Auxiliares para Outras Páginas
+   ========================================================================== */
+.cards-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card-item {
+    background: #ffffff;
+    border: 1px solid var(--cor-borda-fina);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* Tabela de Serviços */
+.tabela-wrapper {
+    overflow-x: auto;
+}
+.tabela-estilizada {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.tabela-estilizada th, .tabela-estilizada td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-borda-fina);
+}
+.tabela-estilizada th {
+    background-color: #f8fafc;
+    color: var(--cor-texto-principal);
+}
+
+/* ==========================================================================
+   Rodapé Estilizado
+   ========================================================================== */
+footer {
+    border-top: 1px solid var(--cor-borda-fina);
+    padding: 2rem 3rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   Responsividade Adaptativa (Media Queries)
+   ========================================================================== */
+@media (max-width: 968px) {
+    .nav-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1.5rem;
+    }
+    nav {
+        justify-self: center;
+    }
+    .grid-main, .contato-inferior-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .estatisticas-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1rem;
+    }
+    .estatistica-item:nth-child(2n) {
+        border-right: none;
+    }
+}

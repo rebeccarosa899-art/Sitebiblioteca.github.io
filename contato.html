@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Biblioteca Municipal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <header>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>📖</h1>
+                    <div class="logo-texto">
+                        <h1>Biblioteca Municipal</h1>
+                        <p>Conhecimento para todos</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre a Biblioteca</a></li>
+                        <li><a href="acervo.html">Acervo</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="contato.html" class="active">Contato</a></li>
+                        <li><a href="#" class="btn-membro">Seja Membro</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Bloco Superior do Contato (Baseado no WhatsApp Image 2026-06-27 at 19.33.05.jpeg) -->
+            <div class="grid-main">
+                <div class="col-imagem">
+                    <img src="contato.jpeg" alt="Balcão da recepção da biblioteca">
+                </div>
+                <div class="col-conteudo">
+                    <h2>Entre em contato</h2>
+                    <p>Estamos aqui para ajudar! Fale conosco para tirar dúvidas, obter informações ou compartilhar sugestões.</p>
+                    
+                    <div class="contato-list-grid">
+                        <div class="contato-item-linha">
+                            <div class="contato-icone-circulo">📞</div>
+                            <div class="contato-texto-bloco">
+                                <h4>Telefone</h4>
+                                <p><strong>(11) 3456-7890</strong></p>
+                                <span>Segunda a sexta, das 8h às 20h<br>Sábado, das 9h às 13h</span>
+                            </div>
+                        </div>
+
+                        <div class="contato-item-linha">
+                            <div class="contato-icone-circulo">📸</div>
+                            <div class="contato-texto-bloco">
+                                <h4>Instagram</h4>
+                                <p><strong>@bibliotecamunicipal</strong></p>
+                                <span>Siga nosso perfil e fique por dentro das novidades!</span>
+                            </div>
+                        </div>
+
+                        <div class="contato-item-linha">
+                            <div class="contato-icone-circulo">✉️</div>
+                            <div class="contato-texto-bloco">
+                                <h4>E-mail</h4>
+                                <p><strong>contato@bibliotecamunicipal.org.br</strong></p>
+                                <span>Responderemos o mais breve possível.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloco Inferior de Localização e Envio de Mensagem (Baseado no WhatsApp Image 2026-06-27 at 19.33.05 (1).jpeg) -->
+            <div class="contato-inferior-grid">
+                <div class="visite-nos-bloco">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Visite-nos</h2>
+                    <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; margin-bottom: 1.5rem;">
+                        <span style="font-size: 1.5rem;">📍</span>
+                        <div class="contato-texto-bloco">
+                            <p style="color: var(--cor-texto-principal); font-size: 1.05rem;"><strong>Rua das Letras, 123 – Centro</strong></p>
+                            <p style="color: var(--cor-texto-principal); font-size: 1.05rem;"><strong>São Paulo, SP – CEP 01000-000</strong></p>
+                            <span style="margin-top: 0.5rem;">Fácil acesso por transporte público.<br>Estacionamento disponível nas proximidades.</span>
+                        </div>
+                    </div>
+                    <button class="btn-preto">Como chegar</button>
+                </div>
+
+                <div class="envie-mensagem-bloco">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Envie uma mensagem</h2>
+                    <form class="formulario-grid" onsubmit="event.preventDefault();">
+                        <div class="formulario-linha-dupla">
+                            <input type="text" placeholder="Nome">
+                            <input type="email" placeholder="E-mail">
+                        </div>
+                        <input type="text" placeholder="Assunto">
+                        <textarea placeholder="Mensagem"></textarea>
+                        <button type="submit" class="btn-preto">Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Biblioteca Municipal Machado de Assis. Conhecimento para todos.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

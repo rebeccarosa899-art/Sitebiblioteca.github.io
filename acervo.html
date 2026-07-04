@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo - Biblioteca Municipal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <header>
+            <div class="nav-container">
+                <div class="logo">
+                    <!-- Representação do ícone de livro em vetor/imagem limpa -->
+                    <img src="img/telefone .jpeg" alt="Logo Icone" style="display:none; height:0;"> 📖
+                    <div class="logo-texto">
+                        <h1>Biblioteca Municipal</h1>
+                        <p>Conhecimento para todos</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre a Biblioteca</a></li>
+                        <li><a href="acervo.html" class="active">Acervo</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#" class="btn-membro">Seja Membro</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Grid de 2 colunas assimétricas usando a imagem correta do acervo -->
+            <div class="grid-main">
+                <div class="col-imagem">
+                    <img src="acervo.jpeg" alt="Estante de livros pretos e brancos">
+                </div>
+                <div class="col-conteudo">
+                    <h2>Nosso Acervo</h2>
+                    <p>Nosso acervo é diverso, atualizado e pensado para atender todas as idades e interesses. São livros, e-books, periódicos, audiolivros e muito mais à sua disposição.</p>
+                    
+                    <div class="busca-grid">
+                        <div class="busca-wrapper">
+                            <input type="text" placeholder="Buscar por título, autor ou assunto">
+                        </div>
+                        <button class="btn-preto">Buscar</button>
+                    </div>
+
+                    <!-- Grid interna de 4 colunas de contadores -->
+                    <div class="estatisticas-grid">
+                        <div class="estatistica-item">
+                            <span class="estatistica-icon">📚</span>
+                            <span class="estatistica-numero">25.480</span>
+                            <span class="estatistica-rotulo">Livros</span>
+                        </div>
+                        <div class="estatistica-item">
+                            <span class="estatistica-icon">📰</span>
+                            <span class="estatistica-numero">1.250</span>
+                            <span class="estatistica-rotulo">Periódicos</span>
+                        </div>
+                        <div class="estatistica-item">
+                            <span class="estatistica-icon">🎧</span>
+                            <span class="estatistica-numero">2.340</span>
+                            <span class="estatistica-rotulo">Audiolivros</span>
+                        </div>
+                        <div class="estatistica-item">
+                            <span class="estatistica-icon">📱</span>
+                            <span class="estatistica-numero">5.600</span>
+                            <span class="estatistica-rotulo">E-books</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Biblioteca Municipal Machado de Assis. Conhecimento para todos.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
