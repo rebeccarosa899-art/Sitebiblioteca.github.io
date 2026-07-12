@@ -380,4 +380,46 @@ footer {
     .estatistica-item:nth-child(2n) {
         border-right: none;
     }
+}.col-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.col-conteudo .estatisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    border-top: 1px solid var(--cor-linha-separadora);
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+}
+.col-conteudo .estatistica-item {
+    border-right: none !important;
+    padding-left: 0;
+}
+.col-conteudo .estatistica-numero {
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.01em;
+}
+.col-conteudo .estatistica-rotulo {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+    line-height: 1.4;
+}
+.col-conteudo .estatistica-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+}
+.col-conteudo .btn-preto {
+    align-self: flex-start; 
+    margin-top: 1rem;
+    padding: 0.75rem 1.8rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
 }

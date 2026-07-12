@@ -3,58 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - Biblioteca Machado de Assis</title>
+    <title>Sobre a Biblioteca - Biblioteca Municipal</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">📖</span>
-                <div class="logo-texto">
-                    <h1>Biblioteca Municipal</h1>
-                    <p>Conhecimento para todos</p>
+    <div class="site-wrapper">
+        <header>
+            <div class="nav-container">
+                <div class="logo">
+                    <span>📖</span>
+                    <div class="logo-texto">
+                        <h1>Biblioteca Machado de Assis</h1>
+                        <p>Conhecimento para todos</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html" class="active">Sobre a Biblioteca</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="contato.html" class="btn-membro">Seja Membro</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="grid-main">
+                <div class="col-imagem">
+                    <img src="img/sobre-foto.jpeg" alt="Prédio da Biblioteca Municipal">
+                </div>
+                
+                <div class="col-conteudo">
+                    <h2>Sobre a Biblioteca</h2>
+                    <p>A Biblioteca Machado de Assis é um espaço dedicado ao conhecimento, à cultura e à comunidade. Nosso objetivo é promover o acesso à informação, incentivar a leitura e apoiar o aprendizado ao longo da vida.</p>
+                    <div class="estatisticas-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 2rem;">
+                        <div class="estatistica-item" style="border-right: none;">
+                            <span class="estatistica-icon">📖</span>
+                            <span class="estatistica-numero" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Acervo completo</span>
+                            <span class="estatistica-rotulo">Livros, periódicos, digitais e muito mais.</span>
+                        </div>
+                        <div class="estatistica-item" style="border-right: none;">
+                            <span class="estatistica-icon">👥</span>
+                            <span class="estatistica-numero" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Para todos</span>
+                            <span class="estatistica-rotulo">Espaço acolhedor para todas as idades.</span>
+                        </div>
+                        <div class="estatistica-item" style="border-right: none;">
+                            <span class="estatistica-icon">📅</span>
+                            <span class="estatistica-numero" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Atividades</span>
+                            <span class="estatistica-rotulo">Eventos, oficinas e clubes de leitura.</span>
+                        </div>
+                    </div>
+                    <a href="servicos.html" class="btn-preto" style="text-decoration: none; display: inline-block;">Conheça nossos serviços</a>
                 </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html" class="active">Sobre a Biblioteca</a></li>
-                    <li><a href="acervo.html">Acervo</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="#" class="btn-membro">Seja Membro</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </main>
 
-    <main>
-        <section class="split-container">
-            <div class="split-content">
-                <h2 class="section-titulo">Nossa História</h2>
-                <p>Fundada com o objetivo de disseminar o conhecimento, a Biblioteca Regional Machado de Assis atua como o coração cultural e informacional da região, promovendo a inclusão social através da leitura.</p>
-                
-                <h3 style="margin-top: 1.5rem;">Missão</h3>
-                <p>Facilitar o acesso livre à informação e promover o hábito da leitura crítica.</p>
-                
-                <h3>Visão</h3>
-                <p>Ser reconhecida como um polo de inovação em gestão documental e atividades socioculturais.</p>
-                
-                <h3>Público Atendido</h3>
-                <p>Estudantes, pesquisadores, crianças e a comunidade em geral.</p>
-            </div>
-            <div class="split-imagem">
-                <img src="img/sobre-foto.jpeg" alt="Estrutura Interna">
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Biblioteca Municipal Machado de Assis. Todos os direitos reservados.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Biblioteca Municipal Machado de Assis. Conhecimento para todos.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
